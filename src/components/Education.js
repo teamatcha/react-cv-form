@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 class Education extends Component {
-
     constructor(props) {
         super(props)
         this.state = {
@@ -18,7 +17,6 @@ class Education extends Component {
 
     clickHandle = (e) => {
         e.preventDefault()
-        console.log("petit test2")
         this.setState(
             this.disabledFunction()
         )
@@ -35,10 +33,8 @@ class Education extends Component {
     changeHandle = (e) => {
         const id = e.target.id
         let value = e.target.value
-
         this.setState({
             [id]: value
-
         })
     }
 
@@ -51,8 +47,8 @@ class Education extends Component {
                     <form className="form-educ">
                         <h1>Education</h1>
                         <div className="form-group">
-                            <label htmlFor="diploma">Diploma</label>
-                            <input type="text" className="form-control" id="diploma" onChange={this.changeHandle} disabled={this.state.disabled} />
+                            <label htmlFor="title">Diploma</label>
+                            <input type="text" className="form-control" id="title" onChange={this.changeHandle} disabled={this.state.disabled} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="year">Year</label>
@@ -62,7 +58,6 @@ class Education extends Component {
                             <label htmlFor="school">University</label>
                             <input type="text" className="form-control" id="school" onChange={this.changeHandle} disabled={this.state.disabled} />
                         </div>
-                        {/* <button type="submit" className="btn btn-primary" onClick={this.createHandle} >ADD</button><br></br> */}
                         <button type="submit" className="btn btn-primary" onClick={this.clickHandle} >Submit</button>
                     </form>
                 </div> :
@@ -70,8 +65,8 @@ class Education extends Component {
                     <form>
                         <h1>Education</h1>
                         <div className="form-group">
-                            <label htmlFor="diploma">Diploma</label>
-                            <p className="form-control" id="diploma">{title}</p>
+                            <label htmlFor="title">Diploma</label>
+                            <p className="form-control" id="title">{title}</p>
                         </div>
                         <div className="form-group">
                             <label htmlFor="year">Year of Completion</label>
